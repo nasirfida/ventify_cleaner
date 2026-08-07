@@ -661,12 +661,12 @@ function renderNewQuoteForm(includeId = false) {
    12. HERO SLIDER
 ================================================= */
 const HERO_SLIDES = [
-  { prov:'Ontario', bg:'images/hero/ontario.webp', h1:'Toronto\'s #1 Rated<br><em>Duct Cleaning</em> Service', sub:'Licensed, NADCA-certified technicians serving Toronto, Mississauga, Ottawa, Hamilton & 30+ Ontario cities.', stats:[{v:'2,800+',l:'Ontario Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'$50 Off',l:'First-Time Customers'}]},
-  { prov:'Alberta', bg:'images/hero/alberta.webp', h1:'Calgary & Edmonton\'s<br>Trusted <em>HVAC Cleaners</em>', sub:'Prairie-grade cleaning for extreme winter climates. Serving Calgary, Edmonton, Red Deer & all Alberta communities.', stats:[{v:'1,800+',l:'Alberta Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'-40°C',l:'We Know AB Winters'}]},
-  { prov:'British Columbia', bg:'images/hero/bc.webp', h1:'Vancouver\'s Coastal<br>Air Quality <em>Experts</em>', sub:'Coastal moisture means mould risk. We prevent it with professional duct & dryer vent cleaning across BC.', stats:[{v:'1,200+',l:'BC Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'Mould Safe',l:'Coastal Specialists'}]},
-  { prov:'Quebec / Québec', bg:'images/hero/quebec.webp', h1:'Montréal & Québec City<br><em>Air Duct Specialists</em>', sub:'Bilingual service for Québec homeowners. Serving Montréal, Laval, Gatineau, Québec City & surrounding areas.', stats:[{v:'1,000+',l:'QC Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'Bilingue',l:'EN & FR Service'}]},
-  { prov:'Manitoba', bg:'images/hero/manitoba.webp', h1:'Winnipeg\'s Deepest<br><em>Duct Cleaning</em> Service', sub:"Canada's coldest city needs Canada's best furnace & duct care. Serving Winnipeg, Brandon & all of Manitoba.", stats:[{v:'600+',l:'MB Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'-45°C',l:'Built for MB Winters'}]},
-  { prov:'Saskatchewan', bg:'images/hero/saskatchewan.webp', h1:'Regina & Saskatoon<br><em>HVAC Cleaning</em> Experts', sub:'Prairie dust, extreme winters, and sealed homes demand the best duct care. We deliver it across Saskatchewan.', stats:[{v:'500+',l:'SK Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'Prairie',l:'Dust Specialists'}]}
+  { prov:'Ontario', tel:'+12896089407', phoneText:'289-608-9407', bg:'images/hero/ontario.webp', h1:'Toronto\'s #1 Rated<br><em>Duct Cleaning</em> Service', sub:'Licensed, NADCA-certified technicians serving Toronto, Mississauga, Ottawa, Hamilton & 30+ Ontario cities.', stats:[{v:'2,800+',l:'Ontario Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'$50 Off',l:'First-Time Customers'}]},
+  { prov:'Alberta', tel:'+15872886610', phoneText:'587-288-6610', bg:'images/hero/alberta.webp', h1:'Calgary & Edmonton\'s<br>Trusted <em>HVAC Cleaners</em>', sub:'Prairie-grade cleaning for extreme winter climates. Serving Calgary, Edmonton, Red Deer & all Alberta communities.', stats:[{v:'1,800+',l:'Alberta Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'-40°C',l:'We Know AB Winters'}]},
+  { prov:'British Columbia', tel:'+15872886610', phoneText:'587-288-6610', bg:'images/hero/bc.webp', h1:'Vancouver\'s Coastal<br>Air Quality <em>Experts</em>', sub:'Coastal moisture means mould risk. We prevent it with professional duct & dryer vent cleaning across BC.', stats:[{v:'1,200+',l:'BC Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'Mould Safe',l:'Coastal Specialists'}]},
+  { prov:'Quebec / Québec', tel:'+12896089407', phoneText:'289-608-9407', bg:'images/hero/quebec.webp', h1:'Montréal & Québec City<br><em>Air Duct Specialists</em>', sub:'Bilingual service for Québec homeowners. Serving Montréal, Laval, Gatineau, Québec City & surrounding areas.', stats:[{v:'1,000+',l:'QC Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'Bilingue',l:'EN & FR Service'}]},
+  { prov:'Manitoba', tel:'+15872886610', phoneText:'587-288-6610', bg:'images/hero/manitoba.webp', h1:'Winnipeg\'s Deepest<br><em>Duct Cleaning</em> Service', sub:"Canada's coldest city needs Canada's best furnace & duct care. Serving Winnipeg, Brandon & all of Manitoba.", stats:[{v:'600+',l:'MB Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'-45°C',l:'Built for MB Winters'}]},
+  { prov:'Saskatchewan', tel:'+17788056342', phoneText:'778-805-6342', bg:'images/hero/saskatchewan.webp', h1:'Regina & Saskatoon<br><em>HVAC Cleaning</em> Experts', sub:'Prairie dust, extreme winters, and sealed homes demand the best duct care. We deliver it across Saskatchewan.', stats:[{v:'500+',l:'SK Homes Cleaned'},{v:'4.4★',l:'Google Rating'},{v:'Prairie',l:'Dust Specialists'}]}
 ];
 
 let curSlide = 0, heroTimer;
@@ -684,7 +684,7 @@ function buildHero() {
         <p class="slide-sub">${s.sub}</p>
         <div class="slide-actions">
           <button class="btn btn-orange" onclick="showQuote()" data-i18n="hero_cta">Get Free Quote — Save $50</button>
-          <a href="tel:+12896089407" class="btn btn-ghost">📞 289-608-9407</a>
+          <a href="tel:${s.tel}" class="btn btn-ghost hero-phone-btn">📞 ${s.phoneText}</a>
         </div>
         <div class="slide-stats">${s.stats.map(st=>`<div class="slide-stat"><strong>${st.v}</strong><span>${st.l}</span></div>`).join('')}</div>
       </div>

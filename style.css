@@ -185,6 +185,8 @@ nav.scrolled{box-shadow:var(--shlg)}
 .slide-content h1 em{color:var(--orange);font-style:normal}
 .slide-sub{font-size:1.05rem;color:rgba(255,255,255,.72);max-width:500px;margin-bottom:32px;line-height:1.7}
 .slide-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero-phone-btn{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.28);color:#fff;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.hero-phone-btn:hover{background:rgba(255,107,43,.2);border-color:rgba(255,107,43,.5);color:#fff}
 .slide-stats{display:flex;gap:32px;flex-wrap:wrap}
 .slide-stat strong{display:block;font-size:1.8rem;font-family:'Fraunces',serif;font-weight:700;color:#fff;line-height:1}
 .slide-stat span{font-size:.8rem;color:rgba(255,255,255,.5);font-weight:500}
@@ -405,6 +407,11 @@ footer{background:var(--navy);padding:70px 0 0}
 .foot-links{display:flex;flex-direction:column;gap:9px}
 .foot-links a{font-size:.88rem;color:rgba(255,255,255,.45);transition:color .2s;cursor:pointer}
 .foot-links a:hover{color:var(--orange)}
+.footer-contact-list{margin-top:16px;display:flex;flex-direction:column;gap:8px;font-size:.83rem}
+.footer-contact-link{color:rgba(255,255,255,.82);font-weight:700;text-decoration:none;line-height:1.6;transition:color .2s, transform .2s}
+.footer-contact-link:hover{color:var(--orange);transform:translateX(2px)}
+.footer-contact-address{color:#fff;font-weight:800}
+.footer-contact-hours{color:rgba(255,255,255,.75);font-weight:600}
 .cities-sec{padding:32px 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .cities-sec h5{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px}
 .cities-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
